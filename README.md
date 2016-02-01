@@ -1,5 +1,5 @@
 # Apothecary
-walking through the shelves of the apothecary for we can learn how to make Elixirs...
+walking through the shelves of the apothecary so we can learn how to brew Elixirs...
 
 ![](http://elixir-lang.org/images/logo/logo.png)
 
