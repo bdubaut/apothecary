@@ -11,6 +11,10 @@ defmodule Calcs do
     km * 1000
   end
 
+  def squared(val) do
+    val * val
+  end
+  
   def square_root(val) do
     :math.sqrt(val)
   end

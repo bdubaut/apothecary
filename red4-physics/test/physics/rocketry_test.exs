@@ -14,4 +14,8 @@ defmodule RocketryTest do
   test "#orbital_speed returns the orbital speed around the earth" do
     assert Rocketry.orbital_speed(100) == 7846.404191259335
   end
+
+  test "#orbital_acceleration returns the orbital acceleration value" do
+    assert Rocketry.orbital_acceleration(100) == 9.515619587729839
+  end
 end
