@@ -1,11 +1,11 @@
 defmodule Physics.Rocketry do
   import Calcs
+  import Planets
+  import Physics.Laws
 
-  @earth %{mass: 5.972e24, radius: 6.371e6}
-  @newtons_contsant 6.67e-11
 
   def escape_velocity(:earth) do
-    @earth
+    earth
       |> escape_velocity
   end
 
@@ -16,8 +16,17 @@ defmodule Physics.Rocketry do
       |> Calcs.to_nearest_tenth
   end
 
+  def orbital_speed(height) do
+    newtons_gravitational_constant * earth.mass / orbital_radius(height)
+      |> square_root
+  end
+
+  defp orbital_radius(height) do
+    earth.radius + (height |> to_m)
+  end
+
   defp calculate_escape(%{mass: mass, radius: radius}) do
-    2 * @newtons_contsant * mass / radius
+    2 * newtons_gravitational_constant * mass / radius
       |> square_root
   end
 end

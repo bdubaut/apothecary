@@ -3,11 +3,15 @@ defmodule RocketryTest do
   alias Physics.Rocketry
   doctest Physics.Rocketry
 
-  test "returns the escape_velocity from the earth" do
+  test "#escape_velocityreturns the escape velocity from the earth" do
     assert Rocketry.escape_velocity(:earth) == 11.2
   end
 
-  test "returns the escape velocity from a planet" do
+  test "#escape_velocity returns the escape velocity from any planet" do
     assert Rocketry.escape_velocity(%{mass: 5.972e24, radius: 6.371e6}) == 11.2
+  end
+
+  test "#orbital_speed returns the orbital speed around the earth" do
+    assert Rocketry.orbital_speed(100) == 7846.404191259335
   end
 end
