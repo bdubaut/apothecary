@@ -18,4 +18,8 @@ defmodule RocketryTest do
   test "#orbital_acceleration returns the orbital acceleration value" do
     assert Rocketry.orbital_acceleration(100) == 9.515619587729839
   end
+
+  test "#orbital_term returns the duration" do
+    assert Rocketry.orbital_term(200) == 1.5
+  end
 end

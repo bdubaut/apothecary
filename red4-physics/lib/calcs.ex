@@ -14,7 +14,15 @@ defmodule Calcs do
   def squared(val) do
     val * val
   end
-  
+
+  def cubed(val) do
+    val * val * val
+  end
+
+  def seconds_to_hours(time) do
+    time / 3600 |> to_nearest_tenth
+  end
+
   def square_root(val) do
     :math.sqrt(val)
   end
